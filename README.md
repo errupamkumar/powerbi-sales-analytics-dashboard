@@ -125,19 +125,128 @@ The dashboard tracks several important metrics:
 
 ## Project Screenshots
 
-### Executive Dashboard
+### Executive Dashboard : 
 
-<img width="2048" height="1300" alt="image" src="https://github.com/user-attachments/assets/1340355b-b83b-483b-a66d-6334f22e2f03" />
+<img width="2067" height="1165" alt="image" src="https://github.com/user-attachments/assets/e012bfa3-327e-4a1c-b6f1-1d90e1fc6cdc" />
+
 
 ### Geographic Map
-![Map View](images/map_view.png)
+<img width="2073" height="1161" alt="image" src="https://github.com/user-attachments/assets/7288ba18-b647-4809-a431-8f351213eb41" />
 
-### Product Detail
-![Product Detail](images/product_detail.png)
 
-### Customer Detail
-![Customer Detail](images/customer_detail.png)
+### Product Detail :
+<img width="2073" height="1165" alt="image" src="https://github.com/user-attachments/assets/d34a56a8-3365-46bf-a7fe-4fce15f1c5ca" />
 
+
+### Customer Detail :
+<img width="2041" height="1164" alt="image" src="https://github.com/user-attachments/assets/e2f7363f-c799-46e4-a66c-53ae4bae1f30" />
+
+---
+## Data Model
+
+The Power BI report is built using a **Star Schema Data Model** to ensure optimized performance and scalable analytics.
+
+The model consists of **fact tables** that store transactional data and **dimension tables** that provide descriptive attributes for analysis.
+
+### Fact Tables
+
+**Sales Data**
+- CustomerKey
+- OrderDate
+- OrderLineItem
+- OrderNumber
+- OrderQuantity
+- ProductKey
+- Retail Price
+- Revenue
+- StockDate
+
+**Returns Data**
+- ProductKey
+- ReturnDate
+- ReturnQuantity
+- TerritoryKey
+
+---
+
+### Dimension Tables
+
+**Customer Lookup**
+- CustomerKey
+- Customer Full Name
+- Annual Income
+- Birth Year
+- Customer Priority
+
+**Product Lookup**
+- ProductKey
+- Product Name
+- Product Color
+- Product Cost
+- Price Point
+- Discount Price
+
+**Product Subcategories Lookup**
+- ProductSubcategoryKey
+- SubcategoryName
+- ProductCategoryKey
+
+**Product Categories Lookup**
+- ProductCategoryKey
+- CategoryName
+
+**Territory Lookup**
+- SalesTerritoryKey
+- Country
+- Region
+- Continent
+
+**Calendar Lookup**
+- Date
+- Day Name
+- Day of Week
+- Month
+- Month Name
+- Month Number
+
+**Rolling Calendar**
+- Date
+- Start of Month
+- Start of Quarter
+- Year
+
+---
+
+### Supporting Tables
+
+**Price Adjustment (%)**
+Used to simulate pricing changes and analyze their impact on revenue and profit.
+
+**Measure Table**
+Stores calculated measures created using DAX for cleaner model organization.
+
+---
+
+### Data Model Diagram :
+
+Below is the relationship model used in the Power BI report.
+
+<img width="1820" height="1073" alt="image" src="https://github.com/user-attachments/assets/8f86b5c3-093b-4e7a-82a1-90f98f1765fc" />
+
+
+---
+
+### Model Design
+
+The data model follows best practices:
+
+- Star schema structure
+- Dimension tables connected to central fact tables
+- Optimized relationships for fast filtering
+- Separate measure table for DAX calculations
+- Lookup tables used for hierarchical analysis
+
+This structure ensures high performance and scalable reporting.
 ---
 
 ## Business Value
@@ -149,9 +258,7 @@ This dashboard enables business users to:
 - Analyze customer purchasing behavior
 - Understand geographic sales trends
 - Make strategic decisions based on data insights
-
----
-
+  
 ## Author
 
 **Rupam Kumar**
