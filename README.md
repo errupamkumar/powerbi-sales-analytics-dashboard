@@ -126,7 +126,8 @@ The dashboard tracks several important metrics:
 ## Project Screenshots
 
 ### Executive Dashboard
-![Executive Dashboard](images/exec_dashboard.png)
+
+<img width="2048" height="1300" alt="image" src="https://github.com/user-attachments/assets/1340355b-b83b-483b-a66d-6334f22e2f03" />
 
 ### Geographic Map
 ![Map View](images/map_view.png)
